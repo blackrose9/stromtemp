@@ -8,8 +8,9 @@ $db = new mysqli('localhost','root','','stcs');
 
 
 $query="SELECT*FROM items WHERE itemid={$_GET['id']}";
+$query2="SELECT * FROM items WHERE categories_catid={$_GET['catid']}";
 
-$product_query=mysqli_query($db,$query);
+$product_query=mysqli_query($db,$query,$query2);
 if(!$product_query)
 {
 	die("QUERY FAILED" . mysqli_error($db));
@@ -147,7 +148,7 @@ while($row=mysqli_fetch_array($product_query))
 				<div class="col-sm-3">
 					<div class="left-sidebar">
 						<h2>Category</h2>
-						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
+						<div class="panel-group category-products" id="accordian"><!--category-products-->
 							
 						</div><!--/category-products-->
 					
@@ -180,7 +181,7 @@ while($row=mysqli_fetch_array($product_query))
 						</div>
 						<div class="col-sm-7">
 							<div class="product-information"><!--/product-information-->
-								<img src="images/product-details/new.jpg" class="newarrival" alt="" />
+								<!--<img src="images/product-details/new.jpg" class="newarrival" alt="" />-->
 								<h2><?php echo $item_name; ?></h2>
 								<p>Web ID: 1089772</p>
 								<span>
@@ -193,7 +194,7 @@ while($row=mysqli_fetch_array($product_query))
 								<img src="images/product-details/rating.png" alt="" />
 								<p><b>Availability:</b> In Stock</p>
 								<p><b>Condition:</b> New</p>
-								<p><b>Brand:</b> E-SHOPPER</p>
+								<p><b>Brand:</b> MEBA</p>
 								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>
 							</div><!--/product-information-->
 						</div>
@@ -211,52 +212,7 @@ while($row=mysqli_fetch_array($product_query))
 						<div class="tab-content">
 							<div class="tab-pane fade" id="details" >
 								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery1.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery2.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery3.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery4.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-											</div>
-										</div>
-									</div>
+									<p><?php echo $item_description;?></p>
 								</div>
 							</div>
 							
@@ -392,6 +348,7 @@ while($row=mysqli_fetch_array($product_query))
 					<div class="recommended_items"><!--recommended_items-->
 						<h2 class="title text-center">Similar items</h2>
 						
+
 						
 					</div><!--/recommended_items-->
 					
@@ -515,6 +472,13 @@ while($row=mysqli_fetch_array($product_query))
 					"</div>" +
 				"</div><hr>";
 	}
+
+	loadSimilarTab();
+
+	function loadSimilarTab(){
+		$.get("get_cat.php", {items: })
+	}
+
     	});
     </script>
 </body>
