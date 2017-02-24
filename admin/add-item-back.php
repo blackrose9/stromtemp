@@ -1,5 +1,5 @@
 <?php
-	class item{
+	class items{
 		public $id;
 		public $name;
 		public $price;
@@ -28,7 +28,7 @@
 	$target = $target . basename( $_FILES['photo']['name']);
 	$targetUrl = "images/items/";
 
-	$new_item = new item(rand(10,1000), $_POST['itemname'],$_POST['price'], $targetUrl.$_FILES['photo']['name'], $_POST['catid'], $_POST['description']);
+	$new_item = new items(rand(10,1000), $_POST['itemname'],$_POST['price'], $targetUrl.$_FILES['photo']['name'], $_POST['catid'], $_POST['description']);
 
 	$query = "INSERT INTO items VALUES('".
 					$new_item->id."','".

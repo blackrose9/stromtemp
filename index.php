@@ -7,11 +7,11 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Home | livefood.com</title>
+    <meta name="description" content="Strom Control Systems, STCS, Strom Website, Strom Electronics, Electronics Store Zambia">
+    <meta name="author" content="STROM">
+    <title>Home | StCS</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway|Roboto:400,700|Ubuntu+Mono|Shadows+Into+Light" />
+    <link href="http://fonts.googleapis.com/css?family=Raleway|Roboto:400,700|Ubuntu+Mono|Shadows+Into+Light" rel="stylesheet"/>
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/price-range.css" rel="stylesheet">
@@ -70,8 +70,8 @@ session_start();
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav" id="headingnavbar">
 								<li><a href="shop.php"><i class="fa fa-shopping-cart"></i> Browse our Shop </a></li>
-								<li><a href="about.php"><i class="fa fa-star"></i> About Us </a></li>
-								<li><a href="contact-us.php"><i class="fa fa-pencil-square-o"></i> Contact Us</a></li>
+								<li><a href="about.html"><i class="fa fa-star"></i> About Us </a></li>
+								<li><a href="contact-us.html"><i class="fa fa-pencil-square-o"></i> Contact Us</a></li>
 							</ul>
 						</div>
 					</div>
@@ -98,8 +98,14 @@ session_start();
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="shop.php">Products</a></li>
                                     </ul>
+                                </li>
+								<li class="dropdown"><a href="#">About<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="about.html">About Us</a></li>
+										<li><a href="contact-us.html">Our Contacts</a></li>
+                                    </ul>
                                 </li> 
-								<li><a href="contact-us.html">Contact</a></li>
+								<li><a href="mailto: stromcs@outlook.com">Talk to Us</a></li>
 							</ul>
 						</div>
 					</div>
@@ -133,7 +139,7 @@ session_start();
 						<div class="carousel-inner" id="carousel-inner-items">
 							<div class="item active">
 								<div class="col-sm-6">
-									<img class='girl img-responsive' id="celebrity" src="images/category/celebrity.jpg"/>
+									<img class='girl img-responsive' id="celebrity" src="images/home/logo.jpg"/>
 								</div>
 							</div>
 						</div>
@@ -157,28 +163,11 @@ session_start();
 			<div class="row">
 				<div class="col-sm-3">
 					<div class="left-sidebar">
-						<h2>Cuisines</h2>
+						<h2>Categories</h2>
 						<div class="panel-group category-products" id="accordian">
-<!--category-cuisines-->
-							
-							
-							
-							
+<!--category-electronics-->
 							
 						</div>
-<!--/category-Cuisines-->
-						
-						
-						<div class="price-range"><!--price-range-->
-							<h2>Price Range</h2>
-							<div class="well text-center">
-								 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
-								 <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
-							</div>
-						</div><!--/price-range-->
-						<div class="shipping text-center"><!--shipping-->
-							<img src="images/home/shipping.jpg" alt="" />
-						</div><!--/shipping-->
 						
 					
 					</div>
@@ -186,60 +175,22 @@ session_start();
 				
 
 				<div class="col-sm-9 padding-right">
-<!--featuresd_items-->
+<!--featured_items-->
 					<div class="features_items">
 						<h2 class="title text-center">Featured Items</h2>
 						<div class = "featured-items">
 							
 						</div>						
 					</div>
-<!--features_items-->
+<!--featured_items-->
 <!--recommended_items-->
 					<div class="recommended_items">
 						<h2 class="title text-center">Weekly Specials</h2>
 						
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">
-								<div class="item active">	
-									<!-- <div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend1.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-												</div>
-												
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend2.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-												</div>
-												
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend3.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-												</div>
-												
-											</div>
-										</div>
-									</div> -->
+								<div class="item active">
+									
 								</div>
 								
 							</div>
@@ -290,7 +241,7 @@ session_start();
 							<h2>Policies</h2>
 							<ul class="nav nav-pills nav-stacked">
 								<li><a href="#">Terms of Use</a></li>
-								<li><a href="#">Privecy Policy</a></li>
+								<li><a href="#">Privacy Policy</a></li>
 								<li><a href="#">Refund Policy</a></li>
 								<li><a href="#">Billing System</a></li>
 								<li><a href="#">Ticket System</a></li>

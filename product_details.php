@@ -23,10 +23,6 @@ while($row=mysqli_fetch_array($product_query))
 	$item_category_id=$row['catid'];
 	$item_description=$row['description'];
 	$item_image=$row['image'];
-	
-	
-	
-	
 }
 ?>
 
@@ -35,9 +31,9 @@ while($row=mysqli_fetch_array($product_query))
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Product Details | E-Shopper</title>
+    <meta name="description" content="Strom Control Systems, STCS, Strom Website, Strom Electronics, Electronics Store Zambia">
+    <meta name="author" content="STROM">
+    <title>Product Details | StCS</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -64,8 +60,8 @@ while($row=mysqli_fetch_array($product_query))
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href=""><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-								<li><a href=""><i class="fa fa-envelope"></i> info@domain.com</a></li>
+								<li><a href=""><i class="fa fa-phone"></i> +260 962 782403</a></li>
+								<li><a href="mailto: stromcs@outlook.com"><i class="fa fa-envelope"></i> stromcs@outlook.com</a></li>
 							</ul>
 						</div>
 					</div>
@@ -75,7 +71,7 @@ while($row=mysqli_fetch_array($product_query))
 								<li><a href=""><i class="fa fa-facebook"></i></a></li>
 								<li><a href=""><i class="fa fa-twitter"></i></a></li>
 								<li><a href=""><i class="fa fa-linkedin"></i></a></li>
-								<li><a href=""><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="stromcs.sales@outlook.com"><i class="fa fa-skype"></i></a></li><!-- skype -->
 								<li><a href=""><i class="fa fa-google-plus"></i></a></li>
 							</ul>
 						</div>
@@ -89,44 +85,15 @@ while($row=mysqli_fetch_array($product_query))
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.php"><img src="images/home/logo2.jpg" alt="" /></a>
-						</div>
-						<div class="btn-group pull-right">
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									KENYA
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Kenya</a></li>
-								</ul>
-							</div>
-							
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									KES
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">KES</a></li>
-								</ul>
-							</div>
+							<a href="index.php"><img src="images/home/logo.jpg" alt="" /></a>
 						</div>
 					</div>
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav" id="headingnavbar">
-								<li><a href="shop.php"><i class="fa fa-star"></i> Products </a></li>
-								<li><a href="cart.php"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="register.html"><i class="fa fa-user"></i> Register </a></li>
-								<!-- <li>
-								displays the emaial of the user that has been logged in
-								 
-								</li> -->
-								<li><a href="login.php" <?php if (isset($_SESSION['logout'])){ if ($_SESSION['logout']!=null){?>style="display:none"<?php }} ?>><i class="fa fa-lock"></i> Login</a></li>
-								<?php
-									echo '<form id ="logout-form" action="process_logout.php"> <input type="submit" name="button" id="submit-button" value='.$_SESSION['logout'].'></form>';
-								?>
+								<li><a href="shop.php"><i class="fa fa-shopping-cart"></i> Browse our Shop </a></li>
+								<li><a href="about.html"><i class="fa fa-star"></i> About Us </a></li>
+								<li><a href="contact-us.html"><i class="fa fa-pencil-square-o"></i> Contact Us</a></li>
 							</ul>
 						</div>
 					</div>
@@ -148,21 +115,25 @@ while($row=mysqli_fetch_array($product_query))
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="index.php" class="active">Home</a></li>
+								<li><a href="index.php">Home</a></li>
 								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.php">Products</a></li>
-										<li><a href="product_details.html">Product Details</a></li> 
-
+                                        <li><a href="shop.php" class="active">Products</a></li>
+                                    </ul>
+                                </li>
+								<li class="dropdown"><a href="#">About<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="about.html">About Us</a></li>
+										<li><a href="contact-us.html">Our Contacts</a></li>
                                     </ul>
                                 </li> 
-								<li><a href="contact-us.html">Contact</a></li>
+								<li><a href="mailto: stromcs@outlook.com">Talk to Us</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-sm-3">
 						<div class="search_box pull-right">
-							<input type="text" placeholder="Search for electronics, switches..."/>
+							<input type="text" placeholder="Search for electronics, switches, etc"/>
 						</div>
 					</div>
 				</div>

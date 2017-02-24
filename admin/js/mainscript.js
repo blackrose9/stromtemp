@@ -6,11 +6,11 @@ $(document).ready(function(){
 
 	//Uses AJAX to get Item items out of the database
 	function loadItem(){
-		$.get("get_item.php", {scope:"ALL"}, function(item_arr){
-			for(var i in item_arr){
+		$.get("get_item.php", {scope:"ALL"}, function(items_arr){
+			for(var i in items_arr){
 
-				var itemTile = toItemHtml(item_arr[i]);
-				$('.inbox-page').append(itemTile);
+				var itemTile = toItemHtml(items_arr[i]);
+				$('#inbox-page').append(itemTile);
 			}
 		});
 	}
@@ -47,7 +47,7 @@ $(document).ready(function(){
 					"<div class='clearfix'> </div>" + 
 					"<div id='collapse"+item.id+"' class='panel-collapse collapse' role='tabpanel' aria-labelledby='collapse"+item.id+"'>" +
 						"<div class='mail-body'>" + 
-							"<p> Price: KES" + item.price + "</p>"+
+							"<p> Price: ZMW" + item.price + "</p>"+
 							"<p> Item Description: " + item.description + "</p> <br><br>" +
 								"<form method='post' action='update_item.php' enctype='multipart/form-data'>" +
 									"Edit Item: <br>" +

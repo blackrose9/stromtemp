@@ -135,7 +135,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						<li class="dropdown profile_details_drop">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 								<div class="profile_img">	
-									<span class="prfil-img"><img src="" alt=""> </span> 
+									<span class="prfil-img"><img src="user.jpg" alt=""> </span> 
 									<div class="clearfix"></div>	
 								</div>	
 							</a>
@@ -161,7 +161,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				<!--grids-->
 				<div class="grids">
 					<div class="progressbar-heading grids-heading">
-						<h2>View and Edit Item</h2>
+						<h2>View and Edit Items</h2>
 					</div>
 					<div class="panel panel-widget">
 						<div class="inbox-page" id="food-page">

@@ -42,7 +42,7 @@
 		//Writes the photo to the server
 		if(move_uploaded_file($_FILES['photo']['tmp_name'], $target)){
 		//reload page
-		header("Location: viewcategory.html");
+		header("Location: viewcategory.php");
 
 		//Tells you if its all ok
 		echo "The file ". basename( $_FILES['photo']['name']). " has been uploaded, and your information has been added to the database";

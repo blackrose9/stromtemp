@@ -1,16 +1,15 @@
 <?php
 //Start session
 session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Shop | E-Shopper</title>
+    <meta name="description" content="Strom Products, Strom Control Systems, STCS, Strom Website, Strom Electronics, Electronics Store Zambia">
+    <meta name="author" content="STROM">
+    <title>Shop | StCS</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -37,8 +36,8 @@ session_start();
 					<div class="col-sm-6 ">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href=""><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-								<li><a href=""><i class="fa fa-envelope"></i> info@domain.com</a></li>
+								<li><a href=""><i class="fa fa-phone"></i> +260 962 782403</a></li>
+								<li><a href="mailto: stromcs@outlook.com"><i class="fa fa-envelope"></i> stromcs@outlook.com</a></li>
 							</ul>
 						</div>
 					</div>
@@ -48,7 +47,7 @@ session_start();
 								<li><a href=""><i class="fa fa-facebook"></i></a></li>
 								<li><a href=""><i class="fa fa-twitter"></i></a></li>
 								<li><a href=""><i class="fa fa-linkedin"></i></a></li>
-								<li><a href=""><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="stromcs.sales@outlook.com"><i class="fa fa-skype"></i></a></li><!-- skype -->
 								<li><a href=""><i class="fa fa-google-plus"></i></a></li>
 							</ul>
 						</div>
@@ -62,44 +61,15 @@ session_start();
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.php"><img src="images/home/logo2.jpg" alt="" /></a>
-						</div>
-						<div class="btn-group pull-right">
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									KENYA
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Kenya</a></li>
-								</ul>
-							</div>
-							
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									KES
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">KES</a></li>
-								</ul>
-							</div>
+							<a href="index.php"><img src="images/home/logo.jpg" alt="StCS logo" /></a>
 						</div>
 					</div>
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav" id="headingnavbar">
-								<li><a href="shop.php"><i class="fa fa-star"></i> Products </a></li>
-								<li><a href="cart.php"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="register.html"><i class="fa fa-user"></i> Register </a></li>
-								<!-- <li>
-								displays the emaial of the user that has been logged in
-								 
-								</li> -->
-								<li><a href="login.php" <?php if (isset($_SESSION['logout'])){ if ($_SESSION['logout']!=null){?>style="display:none"<?php }} ?>><i class="fa fa-lock"></i> Login</a></li>
-								<?php
-									echo '<form id ="logout-form" action="process_logout.php"> <input type="submit" name="button" id="submit-button" value='.$_SESSION['logout'].'></form>';
-								?>
+								<li><a href="shop.php"><i class="fa fa-shopping-cart"></i> Browse our Shop </a></li>
+								<li><a href="about.html"><i class="fa fa-star"></i> About Us </a></li>
+								<li><a href="contact-us.html"><i class="fa fa-pencil-square-o"></i> Contact Us</a></li>
 							</ul>
 						</div>
 					</div>
@@ -121,21 +91,25 @@ session_start();
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="index.php" class="active">Home</a></li>
-								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+								<li><a href="index.php">Home</a></li>
+								<li class="dropdown"><a href="#" class="active">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="shop.php">Products</a></li>
-										<li><a href="product_details.html">Product Details</a></li> 
-
+                                    </ul>
+                                </li>
+								<li class="dropdown"><a href="#">About<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="about.html">About Us</a></li>
+										<li><a href="contact-us.html">Our Contacts</a></li>
                                     </ul>
                                 </li> 
-								<li><a href="contact-us.html">Contact</a></li>
+								<li><a href="mailto: stromcs@outlook.com">Talk to Us</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-sm-3">
 						<div class="search_box pull-right">
-							<input type="text" placeholder="Search for food, cuisines..."/>
+							<input type="text" placeholder="Search for electronics, switches, etc"/>
 						</div>
 					</div>
 				</div>
@@ -235,7 +209,7 @@ session_start();
 					</div>
 					<div class="col-sm-2">
 						<div class="single-widget">
-							<h2>About Shopper</h2>
+							<h2>About STCS</h2>
 							<ul class="nav nav-pills nav-stacked">
 								<li><a href="#">Company Information</a></li>
 								<li><a href="#">Careers</a></li>
@@ -247,7 +221,7 @@ session_start();
 					</div>
 					<div class="col-sm-3 col-sm-offset-1">
 						<div class="single-widget">
-							<h2>About Shopper</h2>
+							<h2>About STCS</h2>
 							<form action="#" class="searchform">
 								<input type="text" placeholder="Your email address" />
 								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
@@ -278,39 +252,40 @@ session_start();
 	<script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
+	
     <script type="text/javascript">
     	$(document).ready(function(){
     		console.log('Message');
 
     		//load featured items for the homepage
 			//featured items are items the site is trying to promote
-			loadFeaturedItems();
+			loadAllItems();
 
 			//uses AJAX to get the last 5 items in food table
-			function loadFeaturedItems(){
-				$.get("get_food.php", {scope:"ALL"}, function(food_arr){
-					for(var i in food_arr){
-						console.log(food_arr[i]);
+			function loadAllItems(){
+				$.get("get_item.php", {scope: "ALL"}, function(items_arr){
+					for(var i in items_arr){
+						console.log(items_arr[i]);
 
-						var featuredTile = toFeaturedHtml(food_arr[i]);
-						console.log(featuredTile);
-						$('.featured-items').append(featuredTile);
+						var allTile = toAllHtml(items_arr[i]);
+						console.log(allTile);
+						$('.featured-items').append(allTile);
 
 					}
 				});
 			}
 
 			//Append Featured Items to the HTML
-			function toFeaturedHtml(food){
-				return "<div class='col-sm-4'><div class='product-image-wrapper' ><div class='single-products'><div class='productinfo text-center'> <a href='product_details.php?id="+food.id+"'> <img id='product-info-img' class="+food.id+" src='"+
-						food.image +
+			function toAllHtml(item){
+				return "<div class='col-sm-4'><div class='product-image-wrapper' ><div class='single-products'><div class='productinfo text-center'> <a href='product_details.php?id="+item.itemid+"'> <img id='product-info-img' class="+item.itemid+" src='"+
+						item.image +
 						"'/> </a>" + 
-						"<h2> KES " +
-						food.price +
+						"<h2> ZMW " +
+						item.price +
 						"</h2>" +
 						"<p>" +
-						food.name +
-						"</p><div class = 'item-add-to-cart'><a href='#' id="+ food.id +" class='btn btn-default add-to-cart'><i class='fa fa-shopping-cart'></i>Add to cart</a></div></div></div>" + 
+						item.name +
+						"</p><div class = 'item-add-to-cart'><a href='#' id="+ item.itemid +" class='btn btn-default add-to-cart'><i class='fa fa-shopping-cart'></i>Add to cart</a></div></div></div>" + 
 						"<div class='choose'>" + 
 							"<ul class='nav nav-pills nav-justified'>" +
 								"<li><a href='#'><i class='fa fa-plus-square'></i>Add to wishlist</a></li>"+
@@ -319,30 +294,7 @@ session_start();
 						"</div></div></div>";
 
 			}
-
-			//Addd to cart
-			$(document).on('click', '.item-add-to-cart a', function (e) {
-	    		var productID = $(this).attr('id');
-	    	
-	    		$.ajax({
-					type: "POST",
-					url: "process_add_to_cart.php",
-					data: { id: productID },
-					cache: false,
-					success: function(result){
-						if(result.error){
-							alert(result.msg);
-						} else {
-							alert(result.msg);
-						}
-					}
-				});
-
-	    		e.preventDefault();
-			});
-
-
-	    });
+	  });
     </script>
 </body>
 </html>

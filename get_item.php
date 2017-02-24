@@ -18,7 +18,7 @@
 	if($db->connect_errno > 0) die('Unable to connect to database ['.$db->connect_error.']');
 
 
-	if($_GET['items'] === "ALL"){
+	if($_GET['scope'] === "ALL"){
 		//Get all items out of database
 		$query = "SELECT * FROM items";
 		if(!$result = $db->query($query)) die ('Error getting Items Information ['.$db->connect_error.']');
