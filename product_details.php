@@ -7,7 +7,7 @@ $db = new mysqli('localhost','root','','stcs');
 	if($db->connect_errno > 0) die('Unable to connect to database ['.$db->connect_error.']');
 
 
-$query="SELECT*FROM items WHERE itemid={$_GET['itemid']}";
+$query="SELECT*FROM items WHERE itemid={$_GET['id']}";
 
 $product_query=mysqli_query($db,$query);
 if(!$product_query)
@@ -20,7 +20,7 @@ while($row=mysqli_fetch_array($product_query))
 	$item_id=$row['itemid'];
 	$item_name=$row['name'];
 	$item_price=$row['price'];
-	$item_category_id=$row['catid'];
+	$item_category_id=$row['categories_catid'];
 	$item_description=$row['description'];
 	$item_image=$row['image'];
 }
