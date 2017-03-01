@@ -2,7 +2,6 @@
 	class items{
 		public $id;
 		public $name;
-		public $price;
 		public $image;
 		public $catid;
 		public $description;
@@ -10,7 +9,6 @@
 		function __construct($i,$n,$p,$img,$ci,$d){
 			$this->id 			=$i;
 			$this->name 		=$n;
-			$this->price 		=$p;
 			$this->image 		=$img;
 			$this->catid 		=$ci;
 			$this->description 	=$d;
@@ -28,12 +26,11 @@
 	$target = $target . basename( $_FILES['photo']['name']);
 	$targetUrl = "images/items/";
 
-	$new_item = new items(rand(10,1000), $_POST['itemname'],$_POST['price'], $targetUrl.$_FILES['photo']['name'], $_POST['catid'], $_POST['description']);
+	$new_item = new items(rand(10,1000), $_POST['itemname'], $targetUrl.$_FILES['photo']['name'], $_POST['catid'], $_POST['description']);
 
 	$query = "INSERT INTO items VALUES('".
 					$new_item->id."','".
 					$new_item->name."','".
-					$new_item->price."','".
 					$new_item->image."','".
 					$new_item->catid."','".
 					$new_item->description."')";

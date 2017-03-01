@@ -47,13 +47,11 @@ $(document).ready(function(){
 					"<div class='clearfix'> </div>" + 
 					"<div id='collapse"+item.id+"' class='panel-collapse collapse' role='tabpanel' aria-labelledby='collapse"+item.id+"'>" +
 						"<div class='mail-body'>" + 
-							"<p> Price: ZMW" + item.price + "</p>"+
 							"<p> Item Description: " + item.description + "</p> <br><br>" +
 								"<form method='post' action='update_item.php' enctype='multipart/form-data'>" +
 									"Edit Item: <br>" +
 									"<input type='text' placeholder='Name' name='itemid' value='"+item.id+"' hidden>"+
 									"<input type='text' placeholder='Name' name='itemname' value='"+item.name+"'>" +
-									"<input type='text' placeholder='Price' name='itemprice' value='"+item.price+"'>" +
 									"<input type='text' placeholder='Description' name='itemdesc' value='"+item.description+"'><br>" +
 									"<select id='item-category' name='item-category'>" +
 										"<option value=''> -Select another Category- </option>" +

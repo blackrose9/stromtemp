@@ -1,25 +1,24 @@
 <?php
+//Start session
+session_start();
+?>
+<?php
 	class items {
 		public $itemid;
 		public $name;
-		public $price;
 		public $image;
-		public $catid;
 
-		function __construct($i,$n,$p,$img,$cid){
+		function __construct($i,$n,$img){
 			$this->itemid 	=$i;
 			$this->name 	=$n;
-			$this->price 	=$p;
 			$this->image 	=$img;
-			$this->catid 	=$cid
 		}
 	}
 
 	//connect to database
 	$db = new mysqli('localhost','root','','stcs');
 	if($db->connect_errno > 0) die('Unable to connect to database ['.$db->connect_error.']');
-
-
+	
 	if($_GET['scope'] === "ALL"){
 		//Get all items out of database
 		$query = "SELECT * FROM items WHERE categories_catid={$_GET['catid']}";
@@ -35,6 +34,7 @@
 		//Respond with a random Items as JSON Object
 		header('Content-Type: application/json');
 		echo json_encode($items_arr);
+		header('Location: shop_category.php?rediectTo='.$_GET['catid']);
 	} else {
 		echo "Unknown Scope";
 	}

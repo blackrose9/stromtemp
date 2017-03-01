@@ -20,11 +20,10 @@
 		if($db->connect_errno > 0) die('Unable to connect to database ['. $db->connect_error . ']');
 
 		$name = $_POST['itemname'];
-		$price = $_POST['itemprice'];
 		$desc = $_POST['itemdesc'];
 		$id = $_POST['itemid'];
 
-		$query = "UPDATE items SET name = '$name', price = '$price', description = '$desc' WHERE itemid = '$id'";
+		$query = "UPDATE items SET name = '$name', description = '$desc' WHERE itemid = '$id'";
 		if(!$result = $db->query($query)) die('There was an error updating to the table items [' . $db->error . ']');
 		else header("Location: viewitem.html");
 
@@ -36,12 +35,11 @@
 		if($db->connect_errno > 0) die('Unable to connect to database ['. $db->connect_error . ']');
 
 		$name = $_POST['itemname'];
-		$price = $_POST['itemprice'];
 		$desc = $_POST['itemdesc'];
 		$cat = $_POST['item-category'];
 		$id = $_POST['itemid'];
 
-		$query = "UPDATE items SET name = '$name', price = '$price', description = '$desc', catid = '$cat' WHERE itemid = '$id'";
+		$query = "UPDATE items SET name = '$name', description = '$desc', catid = '$cat' WHERE itemid = '$id'";
 		if(!$result = $db->query($query)) die('There was an error updating to the table items [' . $db->error . ']');
 		else header("Location: viewitem.html");
 
@@ -54,12 +52,11 @@
 		$targetUrl = "images/items/";
 
 		$name = $_POST['itemname'];
-		$price = $_POST['itemprice'];
 		$desc = $_POST['itemdesc'];
 		$id = $_POST['itemid'];
 		$img = $targetUrl.$_FILES['photo']['name'];
 
-		$query = "UPDATE items SET name = '$name', price = '$price', image = '$img', description = '$desc' WHERE itemid = '$id'";
+		$query = "UPDATE items SET name = '$name', image = '$img', description = '$desc' WHERE itemid = '$id'";
 		if(!$result = $db->query($query)) die('There was an error updating to the table items [' . $db->error . ']');
 		else echo('Item Added Updated to DB');
 
@@ -86,13 +83,12 @@
 		$targetUrl = "images/items/";
 
 		$name = $_POST['itemname'];
-		$price = $_POST['itemprice'];
 		$desc = $_POST['itemdesc'];
 		$id = $_POST['itemid'];
 		$cat = $_POST['item-category'];
 		$img = $targetUrl.$_FILES['photo']['name'];
 
-		$query = "UPDATE items SET name = '$name', description = '$desc', price = '$price', catid = '$cat', image = '$img' WHERE itemid = '$id'";
+		$query = "UPDATE items SET name = '$name', description = '$desc', catid = '$cat', image = '$img' WHERE itemid = '$id'";
 		if(!$result = $db->query($query)) die('There was an error updating to the table items [' . $db->error . ']');
 		else echo('Item Added Updated to DB');
 

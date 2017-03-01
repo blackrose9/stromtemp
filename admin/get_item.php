@@ -2,15 +2,13 @@
 	class items {
 		public $itemid;
 		public $name;
-		public $price;
 		public $image;
 		public $catid;
 		public $description;
 
-		function __construct($i,$n,$p,$img,$ci,$d){
+		function __construct($i,$n,$img,$ci,$d){
 			$this->itemid 		=$i;
 			$this->name 		=$n;
-			$this->price 		=$p;
 			$this->image 		=$img;
 			$this->catid 		=$ci;
 			$this->description 	=$d;

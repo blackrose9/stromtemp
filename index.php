@@ -165,10 +165,8 @@ session_start();
 					<div class="left-sidebar">
 						<h2>Categories</h2>
 						<div class="panel-group category-products" id="accordian">
-<!--category-electronics-->
 							
-						</div>
-						
+						</div><!--category-electronics-->
 					
 					</div>
 				</div>

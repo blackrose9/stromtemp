@@ -25,10 +25,7 @@ $(document).ready(function(){
 	function toFeaturedHtml(item){
 		return "<div class='col-sm-4'><div class='product-image-wrapper' ><div class='single-products'><div class='productinfo text-center'> <a href='product_details.php?id="+item.itemid+"'> <img id='product-info-img' class="+item.itemid+" src='"+
 				item.image +
-				"'/> </a>" + 
-				"<h2> ZMW " +
-				item.price +
-				"</h2>" +
+				"'/> </a>" +
 				"<p>" +
 				item.name +
 				"</p><div class = 'item-add-to-cart'><a href='#' id="+ item.itemid +" class='btn btn-default add-to-cart'><i class='fa fa-shopping-cart'></i>Add to cart</a></div></div></div>" + 
@@ -61,7 +58,7 @@ $(document).ready(function(){
 	function toCategoryHtml(cat){
 		return "<div class='panel panel-default'>" + 
 					"<div class='panel-heading'>" +
-						"<h4 class='panel-title'><a href='#'>" + 
+						"<h4 class='panel-title'><a href='shop_category.php?catid="+cat.catid+"'>" + 
 						cat.name + 
 						"</a></h4>" +
 					"</div>" +
@@ -121,7 +118,6 @@ $(document).ready(function(){
 								"<div class='single-products'>" +
 									"<div class='productinfo text-center'>" +
 										"<img src='"+ items.image +"' alt=''>" +
-										"<h2> KES " + items.price + "</h2>";
 										"<p>" + items.name + "</p>" +
 										"<a href='#' id="+ items.itemid +"class='btn btn-default add-to-cart'><i class='fa fa-shopping-cart'></i>Add to cart</a>" +
 									"</div>" +

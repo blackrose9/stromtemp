@@ -171,9 +171,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<div class="form-body">
 									<form action = "add-item-back.php" method="post" enctype="multipart/form-data"> 
 										<div class="form-group"> <label for="exampleInputEmail1">Name</label> <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name" name="itemname"> 
-										</div> 
-										<div class="form-group"> 
-										<label for="exampleInputPassword1">Price</label> <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Price" name="price"> 
 										</div>
 										<div class="form-group"> 
 										<label for="exampleInputPassword1">Description</label> <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Description" name="description"> 

@@ -2,6 +2,35 @@
 //Start session
 session_start();
 ?>
+<?php
+$db = new mysqli('localhost','root','','stcs');
+	if($db->connect_errno > 0) die('Unable to connect to database ['.$db->connect_error.']');
+
+
+$query="SELECT*FROM items WHERE categories_catid={$_GET['catid']}";
+$query2="SELECT*FROM categories WHERE catid={$_GET['catid']}";
+
+$product_query=mysqli_query($db,$query);
+if(!$product_query) {die("QUERY FAILED" . mysqli_error($db));}
+
+$category_query=mysqli_query($db,$query2);
+if(!$category_query) {die("QUERY FAILED" . mysqli_error($db));}
+
+while($row=mysqli_fetch_array($product_query))
+{
+	$item_id=$row['itemid'];
+	$item_name=$row['name'];
+	$item_category_id=$row['categories_catid'];
+	$item_description=$row['description'];
+	$item_image=$row['image'];
+}
+
+while($row=mysqli_fetch_array($category_query))
+{
+	$category_id=$row['catid'];
+	$category_name=$row['catname'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +38,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Strom Products, Strom Control Systems, STCS, Strom Website, Strom Electronics, Electronics Store Zambia">
     <meta name="author" content="STROM">
-    <title>Shop | StCS</title>
+    <title>Category | StCS</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -119,7 +148,7 @@ session_start();
 	
 	<section id="advertisement">
 		<div class="container">
-			<img src="images/shop/advertisement.jpg" alt="" />
+			
 		</div>
 	</section>
 	
@@ -128,27 +157,17 @@ session_start();
 			<div class="row">
 				<div class="col-sm-3">
 					<div class="left-sidebar">
-						<h2></h2>
-						
-
-						
-						
-						<div class="price-range"><!--price-range-->
-							<h2>Price Range</h2>
-							<div class="well text-center">
-								 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
-								 <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
-							</div>
-						</div><!--/price-range-->
-						
-						
+						<h2>Categories</h2>
+						<div class="panel-group category-products" id="accordian">
+							
+						</div><!--category-electronics-->						
 					
 					</div>
 				</div>
 				
 <!-- All Products -->
 				<div class="features_items">
-					<h2 class="title text-center">All Products</h2>
+					<h2 class="title text-center">Our <?php echo $category_name; ?></h2>
 					<div class = "featured-items">
 							
 					</div>	
@@ -247,50 +266,54 @@ session_start();
 
   
     <script src="js/jquery.js"></script>
+
 	<script src="js/price-range.js"></script>
     <script src="js/jquery.scrollUp.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
+	<script src="js/script.js"></script>
 	
     <script type="text/javascript">
     	$(document).ready(function(){
     		console.log('Message');
 
-    		//load featured items for the homepage
-			//featured items are items the site is trying to promote
-			loadAllItems();
+			//load selected category items for the shop
+	//selected items are items from the category the user chosen 
+	loadFeaturedItems();
 
-			//uses AJAX to get the last 5 items in food table
-			function loadAllItems(){
-				$.get("get_item.php", {scope: "ALL"}, function(items_arr){
-					for(var i in items_arr){
-						console.log(items_arr[i]);
+	//uses AJAX to get the last 5 items in item table
+	function loadFeaturedItems(){
+		$.get(get_item.php, {scope:"ALL"}, function(items_arr){
+			for(var i in items_arr){
+				console.log(items_arr[i]);
 
-						var allTile = toAllHtml(items_arr[i]);
-						console.log(allTile);
-						$('.featured-items').append(allTile);
-
-					}
-				});
-			}
-
-			//Append Featured Items to the HTML
-			function toAllHtml(item){
-				return "<div class='col-sm-4'><div class='product-image-wrapper' ><div class='single-products'><div class='productinfo text-center'> <a href='product_details.php?id="+item.itemid+"'> <img id='product-info-img' class="+item.itemid+" src='"+
-						item.image +
-						"'/> </a>" +
-						"<p>" +
-						item.name +
-						"</p><div class = 'item-add-to-cart'><a href='#' id="+ item.itemid +" class='btn btn-default add-to-cart'><i class='fa fa-shopping-cart'></i>Add to cart</a></div></div></div>" + 
-						"<div class='choose'>" + 
-							"<ul class='nav nav-pills nav-justified'>" +
-								"<li><a href='#'><i class='fa fa-plus-square'></i>Add to wishlist</a></li>"+
-								"<li><a href='#''><i class='fa fa-plus-square'></i>Add to compare</a></li>" +
-							"</ul>" +
-						"</div></div></div>";
+				var featuredTile = toFeaturedHtml(items_arr[i]);
+				console.log(featuredTile);
+				$('.featured-items').append(featuredTile);
 
 			}
+		});
+	}
+
+	//Append Featured Items to the HTML
+	function toFeaturedHtml(item){
+		return "<div class='col-sm-4'><div class='product-image-wrapper' ><div class='single-products'><div class='productinfo text-center'> <a href='product_details.php?id="+item.itemid+"'> <img id='product-info-img' class="+item.itemid+" src='"+
+				item.image +
+				"'/> </a>" +
+				"<p>" +
+				item.name +
+				"</p><div class = 'item-add-to-cart'><a href='#' id="+ item.itemid +" class='btn btn-default add-to-cart'><i class='fa fa-shopping-cart'></i>Add to cart</a></div></div></div>" + 
+				"<div class='choose'>" + 
+					"<ul class='nav nav-pills nav-justified'>" +
+						"<li><a href='#'><i class='fa fa-plus-square'></i>Add to wishlist</a></li>"+
+						"<li><a href='#''><i class='fa fa-plus-square'></i>Add to compare</a></li>" +
+					"</ul>" +
+				"</div></div></div>";
+
+	}
+
+
 	  });
     </script>
 </body>
