@@ -204,7 +204,7 @@ while($row=mysqli_fetch_array($category_query))
 						<div class="single-widget">
 							<h2>Quick Shop</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="shop.html">Our Shop</a></li>
+								<li><a href="shop.php">Our Shop</a></li>
 								<li><a href="#cats">Our Categories</a></li>
 							</ul>
 						</div>

@@ -117,9 +117,25 @@
     	<div class="bg">
 	    	<div class="row">    		
 	    		<div class="col-sm-12">    			   			
-					<h2 class="title text-center">Contact <strong>Us</strong></h2>    			    				    				
-					<div id="gmap" class="contact-map">
-					</div>
+					<h2 class="title text-center">Our Location</h2>
+
+					<div id="gmap" class="contact-map"></div>
+					<script>
+						function initMap() {
+							var lusaka = {lat: -15.3875, lng: 28.3228};
+							var map = new google.maps.Map(document.getElementById('map'), {
+								zoom: 4,
+								center: lusaka
+							});
+							var marker = new google.maps.Marker({
+								position: lusaka,
+								map: map
+							});
+						}
+					</script>
+					<script async defer
+					src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+					</script>
 				</div>			 		
 			</div>    	
     		<div class="row">  	
@@ -150,12 +166,11 @@
 	    			<div class="contact-info">
 	    				<h2 class="title text-center">Contact Info</h2>
 	    				<address>
-	    					<p>E-Shopper Inc.</p>
-							<p>935 W. Webster Ave New Streets Chicago, IL 60614, NY</p>
-							<p>Newyork USA</p>
-							<p>Mobile: +2346 17 38 93</p>
-							<p>Fax: 1-714-252-0026</p>
-							<p>Email: info@e-shopper.com</p>
+	    					<p>Strom Control Systems Ltd</p>
+							<p>Shop #19 Corner of Kalambo Rd and Freedom Way, North-End Lusaka Town</p>
+							<p>Lusaka, Zambia</p></br>
+							<p>Mobile: +260 962 782403</p>
+							<p>Email: stromcs@outlook.com</p>
 	    				</address>
 	    				<div class="social-networks">
 	    					<h2 class="title text-center">Social Networking</h2>

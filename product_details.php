@@ -115,9 +115,9 @@ while($row=mysqli_fetch_array($product_query))
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="index.php">Home</a></li>
-								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+								<li class="dropdown"><a href="#" class="active">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.php" class="active">Products</a></li>
+                                        <li><a href="shop.php">Products</a></li>
                                     </ul>
                                 </li>
 								<li class="dropdown"><a href="#">About<i class="fa fa-angle-down"></i></a>
