@@ -6,7 +6,7 @@
 		public $catid;
 		public $description;
 
-		function __construct($i,$n,$p,$img,$ci,$d){
+		function __construct($i,$n,$img,$ci,$d){
 			$this->id 			=$i;
 			$this->name 		=$n;
 			$this->image 		=$img;
