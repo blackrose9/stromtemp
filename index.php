@@ -163,7 +163,7 @@ session_start();
 			<div class="row">
 				<div class="col-sm-3">
 					<div class="left-sidebar">
-						<h2>Categories</h2>
+						<h2 id="cats"> Categories</h2>
 						<div class="panel-group category-products" id="accordian">
 							
 						</div><!--category-electronics-->
@@ -226,23 +226,19 @@ session_start();
 						<div class="single-widget">
 							<h2>Quick Shop</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Chinese</a></li>
-								<li><a href="#">Indian</a></li>
-								<li><a href="#">Japanese</a></li>
-								<li><a href="#">Korean</a></li>
-								<li><a href="#">Swahili</a></li>
+								<li><a href="shop.html">Our Shop</a></li>
+								<li><a href="#cats">Our Categories</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-sm-2">
 						<div class="single-widget">
-							<h2>Policies</h2>
+							<h2>Company Profile</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Terms of Use</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-								<li><a href="#">Refund Policy</a></li>
-								<li><a href="#">Billing System</a></li>
-								<li><a href="#">Ticket System</a></li>
+								<li><a href="about.html#ms">Mission Statement</a></li>
+								<li><a href="about.html#v">Vision</a></li>
+								<li><a href="about.html#pr">Product Range</a></li>
+								<li><a href="about.html#ma">Market Approach</a></li>
 							</ul>
 						</div>
 					</div>
@@ -250,11 +246,9 @@ session_start();
 						<div class="single-widget">
 							<h2>About Strom</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Company Information</a></li>
+								<li><a href="contact-us.html">Company Information</a></li>
 								<li><a href="#">Careers</a></li>
-								<li><a href="#">Store Location</a></li>
-								<li><a href="#">Affillate Program</a></li>
-								<li><a href="#">Copyright</a></li>
+								<li><a href="mailto:stromcs.sales@outlook.com">Email Us</a></li>
 							</ul>
 						</div>
 					</div>

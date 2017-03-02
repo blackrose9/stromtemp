@@ -157,7 +157,7 @@ while($row=mysqli_fetch_array($category_query))
 			<div class="row">
 				<div class="col-sm-3">
 					<div class="left-sidebar">
-						<h2>Categories</h2>
+						<h2 id="cats">Categories</h2>
 						<div class="panel-group category-products" id="accordian">
 							
 						</div><!--category-electronics-->						
@@ -196,8 +196,6 @@ while($row=mysqli_fetch_array($category_query))
 							<ul class="nav nav-pills nav-stacked">
 								<li><a href="#">Online Help</a></li>
 								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Order Status</a></li>
-								<li><a href="#">Change Location</a></li>
 								<li><a href="#">FAQ’s</a></li>
 							</ul>
 						</div>
@@ -206,41 +204,35 @@ while($row=mysqli_fetch_array($category_query))
 						<div class="single-widget">
 							<h2>Quick Shop</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Chinese</a></li>
-								<li><a href="#">Indian</a></li>
-								<li><a href="#">Japanese</a></li>
-								<li><a href="#">Korean</a></li>
-								<li><a href="#">Swahili</a></li>
+								<li><a href="shop.html">Our Shop</a></li>
+								<li><a href="#cats">Our Categories</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-sm-2">
 						<div class="single-widget">
-							<h2>Policies</h2>
+							<h2>Company Profile</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Terms of Use</a></li>
-								<li><a href="#">Privecy Policy</a></li>
-								<li><a href="#">Refund Policy</a></li>
-								<li><a href="#">Billing System</a></li>
-								<li><a href="#">Ticket System</a></li>
+								<li><a href="about.html#ms">Mission Statement</a></li>
+								<li><a href="about.html#v">Vision</a></li>
+								<li><a href="about.html#pr">Product Range</a></li>
+								<li><a href="about.html#ma">Market Approach</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-sm-2">
 						<div class="single-widget">
-							<h2>About STCS</h2>
+							<h2>About Strom</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Company Information</a></li>
+								<li><a href="contact-us.html">Company Information</a></li>
 								<li><a href="#">Careers</a></li>
-								<li><a href="#">Store Location</a></li>
-								<li><a href="#">Affillate Program</a></li>
-								<li><a href="#">Copyright</a></li>
+								<li><a href="mailto:stromcs.sales@outlook.com">Email Us</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-sm-3 col-sm-offset-1">
 						<div class="single-widget">
-							<h2>About STCS</h2>
+							<h2>About Strom</h2>
 							<form action="#" class="searchform">
 								<input type="text" placeholder="Your email address" />
 								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
@@ -256,7 +248,7 @@ while($row=mysqli_fetch_array($category_query))
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2016 E-SHOPPER Inc. All rights reserved.</p>
+					<p class="pull-left">Copyright © 2017 Strom Control Systems Ltd. All rights reserved.</p>
 				</div>
 			</div>
 		</div>
