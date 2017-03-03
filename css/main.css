@@ -2093,8 +2093,6 @@ label.error {
   height: 400px;
   margin-top: 20px;
   margin-bottom: 10px;
-  border-bottom: 1px black dashed;
-  border-top: 1px black solid;
 }
 .inrow{
   height: 347px;
@@ -2102,6 +2100,7 @@ label.error {
 }
 .words{
   width: 50%;
+  padding-top: 110px;
   padding-right: 5px;
   float: left;
 }
@@ -2113,12 +2112,13 @@ label.error {
 .aboutimg img{
   height: 100%;
   width: 80%;
-  border-radius: 200px 10px 10px 200px;
+  border-radius: 35px 0px 50px 70px;
   float: right;
 }
 /*words1 and aboutimg1 are going to be on the opposite side of the original words and aboutimg*/
 .words1{
   width: 50%;
+  padding-top: 100px;
   padding-left: 5px;
   float: right;
 }
@@ -2130,7 +2130,7 @@ label.error {
 .aboutimg1 img{
   height: 100%;
   width: 80%;
-  border-radius:10px 200px 200px 10px;
+  border-radius:0px 35px 70px 50px;
 }
 
 .contact-info .heading, 

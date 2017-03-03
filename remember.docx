@@ -5,3 +5,23 @@ direct all images to specific category :) not to undefined ID :) !done!
 
 add table brand for meba and people and STCS
 look for pictures for control panel boxes, soft starter panels, photocells, sockets, voltmeters, hourmeters, capacitors, surgearrestor, push button, phase failure relay 1&3phase, pilot lights, mccbs, mutlimeters, start delta starter, varible frequency drives, wireducts, din rails(aluminium and steel), 
+
+the map didn't have an api, so here, just keep the code:
+/**start of code**/
+<script>
+    function initMap() {
+        var lusaka = {lat: -15.3875, lng: 28.3228};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: lusaka
+        });
+        var marker = new google.maps.Marker({
+            position: lusaka,
+            map: map
+        });
+    }
+</script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
+/**end of code**/

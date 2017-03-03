@@ -19,7 +19,7 @@
 	STATIC $count = 6;
 	$count++;
 
-	//directory where immage will be saved
+	//file where the image will be saved
 	$target = "../images/category/";
 	$target = $target . basename( $_FILES['photo']['name']);
 	$targetUrl = "images/category/";
