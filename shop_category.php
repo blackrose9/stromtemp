@@ -121,12 +121,8 @@ while($row=mysqli_fetch_array($category_query))
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="index.php">Home</a></li>
-								<li class="dropdown"><a href="#" class="active">Shop<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.php">Products</a></li>
-                                    </ul>
-                                </li>
-								<li class="dropdown"><a href="#">About<i class="fa fa-angle-down"></i></a>
+								<li class="dropdown"><a href="shop.php">Shop</li></a>
+								<li class="dropdown"><a>About<i class="fa fa-angle-down"></a></i>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="about.html">About Us</a></li>
 										<li><a href="contact-us.html">Our Contacts</a></li>
@@ -168,7 +164,7 @@ while($row=mysqli_fetch_array($category_query))
 <!-- All Products -->
 				<div class="features_items">
 					<h2 class="title text-center">Our <?php echo $category_name; ?></h2>
-					<div class = "featured-items">
+					<div class = "cateitems">
 							
 					</div>	
 
@@ -276,13 +272,13 @@ while($row=mysqli_fetch_array($category_query))
 
 	//uses AJAX to get the last 5 items in item table
 	function loadFeaturedItems(){
-		$.get(get_item.php, {scope:"ALL"}, function(items_arr){
+		$.get("get_cat.php", {scope : "ALL"}, function(items_arr){
 			for(var i in items_arr){
 				console.log(items_arr[i]);
 
 				var featuredTile = toFeaturedHtml(items_arr[i]);
 				console.log(featuredTile);
-				$('.featured-items').append(featuredTile);
+				$('.catitems').append(featuredTile);
 
 			}
 		});

@@ -115,12 +115,8 @@ while($row=mysqli_fetch_array($product_query))
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="index.php">Home</a></li>
-								<li class="dropdown"><a href="#" class="active">Shop<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.php">Products</a></li>
-                                    </ul>
-                                </li>
-								<li class="dropdown"><a href="#">About<i class="fa fa-angle-down"></i></a>
+								<li class="dropdown"><a href="shop.php">Shop</li></a>
+								<li class="dropdown"><a>About<i class="fa fa-angle-down"></a></i>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="about.html">About Us</a></li>
 										<li><a href="contact-us.html">Our Contacts</a></li>
@@ -128,11 +124,6 @@ while($row=mysqli_fetch_array($product_query))
                                 </li> 
 								<li><a href="mailto: stromcs@outlook.com">Talk to Us</a></li>
 							</ul>
-						</div>
-					</div>
-					<div class="col-sm-3">
-						<div class="search_box pull-right">
-							<input type="text" placeholder="Search for electronics, switches, etc"/>
 						</div>
 					</div>
 				</div>

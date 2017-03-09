@@ -10,7 +10,7 @@ $(document).ready(function(){
 	//uses AJAX to get the last 5 items in item table
 	function loadFeaturedItems(){
 		$.get("get_item.php", {scope:"ALL"}, function(items_arr){
-			for(var i = 0; i < 6; i++){
+			for(var i = 0; i < 8; i++){
 				console.log(items_arr[i]);
 
 				var featuredTile = toFeaturedHtml(items_arr[i]);
@@ -38,7 +38,6 @@ $(document).ready(function(){
 
 	}
 
-
 	//load category tabs
 	loadCategoryTabs();
 
@@ -58,7 +57,7 @@ $(document).ready(function(){
 	function toCategoryHtml(cat){
 		return "<div class='panel panel-default'>" + 
 					"<div class='panel-heading'>" +
-						"<h4 class='panel-title'><a href='shop_category.php?catid="+cat.catid+"'>" + 
+						"<h4 class='panel-title'><a href='get_cat.php?catid="+cat.catid+"'>" + 
 						cat.name + 
 						"</a></h4>" +
 					"</div>" +
@@ -126,5 +125,39 @@ $(document).ready(function(){
 							"</div>" +
 						"</div>";
 	}
+
+		loadCateItems();
+
+	//uses AJAX to get the last 5 items in item table
+	function loadCateItems(){
+		$.get("shop_category.php", {scope:"ALL"}, function(items_arr){
+			for(var i in items_arr){
+				console.log(items_arr[i]);
+
+				var cateTile = toCateHtml(items_arr[i]);
+				console.log(cateTile);
+				$('.cateitems').append(cateTile);
+
+			}
+		});
+	}
+
+	//Append Featured Items to the HTML
+	function toCateHtml(item){
+		return "<div class='col-sm-4'><div class='product-image-wrapper' ><div class='single-products'><div class='productinfo text-center'> <a href='product_details.php?id="+item.itemid+"'> <img id='product-info-img' class="+item.itemid+" src='"+
+				item.image +
+				"'/> </a>" +
+				"<p>" +
+				item.name +
+				"</p><div class = 'item-add-to-cart'><a href='#' id="+ item.itemid +" class='btn btn-default add-to-cart'><i class='fa fa-shopping-cart'></i>Add to cart</a></div></div></div>" + 
+				"<div class='choose'>" + 
+					"<ul class='nav nav-pills nav-justified'>" +
+						"<li><a href='#'><i class='fa fa-plus-square'></i>Add to wishlist</a></li>"+
+						"<li><a href='#''><i class='fa fa-plus-square'></i>Add to compare</a></li>" +
+					"</ul>" +
+				"</div></div></div>";
+
+	}
+
 
 });
