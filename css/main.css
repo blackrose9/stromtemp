@@ -169,14 +169,10 @@ a#scrollUp i{
     height: 50px;
 }
 
-#featured-products{
-  height: 450px;
-}
-
 .header-middle .container .row .col-sm-8 {
 	padding-right:0;
+  float: right;
 }
-
 
 .usa {
   border-radius: 0;
@@ -855,7 +851,6 @@ h2.title:before{
   margin-left: -5px;
 }
 
-
 .padding-right {
   padding-right: 0;
 }
@@ -864,6 +859,14 @@ h2.title:before{
 	overflow:hidden;
 }
 
+#featured-items{
+  height: 500px;
+}
+
+.col-sm-4{
+  width: 150px;
+  height: 200px;
+}
 
 h2.title {
   color: #FE980F;
@@ -880,6 +883,8 @@ h2.title {
 	border:1px solid #F7F7F5;
 	overflow: hidden;
 	margin-bottom:30px;
+  height: 100%;
+  width: 100%;
 }
 
 .single-products {
@@ -892,19 +897,34 @@ h2.title {
   right: 0;
 }
 
-.productinfo h2{
-	color: #FE980F;
-	font-family: 'Roboto', sans-serif;
-	font-size: 24px;
-	font-weight: 700;
-}
 .product-overlay h2{
 	color: #fff;
 	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 	font-weight: 700;
 }
+
+.product-overlay {
+  background:#FE980F;
+  top: 0;
+  display: none;
+  height: 0;
+  position: absolute;
+  transition: height 500ms ease 0s;
+  width: 100%;
+  display: block;
+}
+
+.productinfo h2{
+	color: #FE980F;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+}
 .productinfo{
+  height: 150px;
+  width: 100px;
+  position:relative;
   cursor: pointer;
 }
 
@@ -924,22 +944,7 @@ h2.title {
   height: 100%;
   width: 100%;
 }
-.productinfo{
-  height: 150px;
-  width: 130px;
-  position:relative;
-}
 
-.product-overlay {
-  background:#FE980F;
-  top: 0;
-  display: none;
-  height: 0;
-  position: absolute;
-  transition: height 500ms ease 0s;
-  width: 100%;
-  display: block;
-}
 
 .single-products:hover .product-overlay {
   display:block;
@@ -970,15 +975,12 @@ h2.title {
   color: #FE980F;
 }
 
-
 .product-overlay p{
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #fff;
 }
-
-
 
 .add-to-cart {
   background:#F5F5ED;
@@ -1005,11 +1007,6 @@ h2.title {
 	margin-right:5px;
 }
 
-.add-to-cart:hover {
-  background: #FE980F;
-  color: #FFFFFF;
-}
-
 .choose {
   border-top: 1px solid #F7F7F0;
 }
@@ -1023,7 +1020,7 @@ h2.title {
 }
 
 .choose ul li a i{
-	margin-right:5px;
+  margin-right: auto;
 }
 
 .choose ul li a:hover{

@@ -134,10 +134,16 @@
 				                <input type="email" name="email" class="form-control" required="required" placeholder="Email">
 				            </div>
 				            <div class="form-group col-md-12">
-				                <input type="text" name="subject" class="form-control" required="required" placeholder="Subject">
+								<select name="subject" class="form-control" placeholder="Subject" required>
+									<option>-Select Subject-</option>
+									<option>Purchases</option>
+									<option>Sales</option>
+									<option>Careers</option>
+									<option>Other</option>
+								</select>
 				            </div>
 				            <div class="form-group col-md-12">
-				                <textarea name="message" id="message" required="required" class="form-control" rows="8" maxlength="500" placeholder="Your Message Here"></textarea>
+				                <textarea type="varchar" name="message" id="message" required="required" class="form-control" rows="8" maxlength="500" placeholder="Your Message Here"></textarea>
 				            </div>                        
 				            <div class="form-group col-md-12">
 				                <input type="submit" name="submit" class="btn btn-primary pull-right" value="Submit">

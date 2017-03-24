@@ -31,8 +31,7 @@ $(document).ready(function(){
 				"</p><div class = 'item-add-to-cart'><a href='#' id="+ item.itemid +" class='btn btn-default add-to-cart'><i class='fa fa-shopping-cart'></i>Add to cart</a></div></div></div>" + 
 				"<div class='choose'>" + 
 					"<ul class='nav nav-pills nav-justified'>" +
-						"<li><a href='#'><i class='fa fa-plus-square'></i>Add to wishlist</a></li>"+
-						"<li><a href='#''><i class='fa fa-plus-square'></i>Add to compare</a></li>" +
+						"<li><a href=''><i class='fa fa-plus-square'></i>Add to wishlist</a></li>"+
 					"</ul>" +
 				"</div></div></div>";
 
@@ -57,11 +56,24 @@ $(document).ready(function(){
 	function toCategoryHtml(cat){
 		return "<div class='panel panel-default'>" + 
 					"<div class='panel-heading'>" +
-						"<h4 class='panel-title'><a href='get_cat.php?catid="+cat.catid+"'>" + 
+						"<h4 class='panel-title'><a href='shop_category.php?catid="+cat.catid+"'>" + 
 						cat.name + 
 						"</a></h4>" +
 					"</div>" +
 				"</div><hr>";
+	}
+	$('.panel-group').on('click', '.panel-title', function(event){
+		var cid = $(this).attr('cid');
+
+		//acquiring products
+		load_items(cid)
+		event.preventDefault();
+	});
+	//check here first for naming errors
+	function load_items(cid){
+		$.get("get_cat.php", {catitems: "ALL", id:cid}, function(items_arr){
+			alert(items_arr[0].name);
+		});
 	}
 
 	//load carousel -- slider
@@ -86,7 +98,7 @@ $(document).ready(function(){
 							"<h1></h1>" + 
 							"<h2 id='slider-desc'>" + slider.description + "</h2>" +
 							"<p></p>" +
-							"<button type='button' class='btn btn-default get'>See More</button>" + 
+							"<button type='button' class='btn btn-default get'><a href='shop.php'>See More</a></button>" + 
 						"</div>" + 
 						"<div class='col-sm-6'>" +
 							"<img class='girl img-responsive' src='"+ slider.image + "'/>" +
@@ -153,7 +165,6 @@ $(document).ready(function(){
 				"<div class='choose'>" + 
 					"<ul class='nav nav-pills nav-justified'>" +
 						"<li><a href='#'><i class='fa fa-plus-square'></i>Add to wishlist</a></li>"+
-						"<li><a href='#''><i class='fa fa-plus-square'></i>Add to compare</a></li>" +
 					"</ul>" +
 				"</div></div></div>";
 

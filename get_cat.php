@@ -1,8 +1,4 @@
 <?php
-//Start session
-session_start();
-?>
-<?php
 	class items {
 		public $itemid;
 		public $name;
@@ -19,9 +15,10 @@ session_start();
 	$db = new mysqli('localhost','root','','stcs');
 	if($db->connect_errno > 0) die('Unable to connect to database ['.$db->connect_error.']');
 	
-	// if($_GET['scope'] === "ALL"){
+	if($_GET['catitems'] === "ALL"){
+		$cid = $_GET["catid"];
 		//Get all items out of database
-		$query = "SELECT * FROM items WHERE categories_catid={$_GET['catid']}";
+		$query = "SELECT * FROM items WHERE categories_catid='$cid'";
 		if(!$result = $db->query($query)) die ('Error getting Items Information ['.$db->connect_error.']');
 		$items = $result->fetch_all();
 
@@ -34,8 +31,8 @@ session_start();
 		//Respond with a random Items as JSON Object
 		header('Content-Type: application/json');
 		echo json_encode($items_arr);
-		header('Location: shop_category.php?catid='.$_GET['catid']);
-	// } else {
-	// 	echo "Unknown Scope";
-	// }
+		
+	} else {
+		echo "Unknown Scope";
+	}
 ?>

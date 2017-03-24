@@ -254,7 +254,6 @@ while($row=mysqli_fetch_array($category_query))
 
   
     <script src="js/jquery.js"></script>
-
 	<script src="js/price-range.js"></script>
     <script src="js/jquery.scrollUp.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -262,7 +261,7 @@ while($row=mysqli_fetch_array($category_query))
     <script src="js/main.js"></script>
 	<script src="js/script.js"></script>
 	
-    <script type="text/javascript">
+    <script type="text/javascript" charset = "utf8_encode">
     	$(document).ready(function(){
     		console.log('Message');
 
@@ -272,7 +271,7 @@ while($row=mysqli_fetch_array($category_query))
 
 	//uses AJAX to get the last 5 items in item table
 	function loadFeaturedItems(){
-		$.get("get_cat.php", {scope : "ALL"}, function(items_arr){
+		$.get("get_cat.php", {catitems : "ALL"}, function(items_arr){
 			for(var i in items_arr){
 				console.log(items_arr[i]);
 
